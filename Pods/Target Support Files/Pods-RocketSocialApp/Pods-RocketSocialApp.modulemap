@@ -1,0 +1,6 @@
+framework module Pods_RocketSocialApp {
+  umbrella header "Pods-RocketSocialApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

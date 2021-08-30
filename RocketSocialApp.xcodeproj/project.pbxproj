@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C7CD6782A9A7A8DC8183FB1 /* Pods_RocketSocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD39DCA14058063B3C6A61D /* Pods_RocketSocialApp.framework */; };
+		9906DCC926BC5260007A5C33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906DCC826BC5260007A5C33 /* AppDelegate.swift */; };
+		9906DCCB26BC5260007A5C33 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906DCCA26BC5260007A5C33 /* SceneDelegate.swift */; };
+		9906DCD226BC5260007A5C33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9906DCD126BC5260007A5C33 /* Assets.xcassets */; };
+		9906DCD526BC5260007A5C33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9906DCD326BC5260007A5C33 /* LaunchScreen.storyboard */; };
+		9906DCE126BC78EF007A5C33 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906DCE026BC78EF007A5C33 /* HomeController.swift */; };
+		9906DCE326BC7A3C007A5C33 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906DCE226BC7A3C007A5C33 /* Service.swift */; };
+		9906DCE826BCC50E007A5C33 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9906DCE726BCC50E007A5C33 /* LoginController.swift */; };
+		993DC50E26D9447C00BB3D1C /* FriendsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993DC50D26D9447C00BB3D1C /* FriendsHeader.swift */; };
+		993DC51226D9481900BB3D1C /* FriendsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993DC51126D9481900BB3D1C /* FriendsHorizontalController.swift */; };
+		993DC51426D94EB500BB3D1C /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993DC51326D94EB500BB3D1C /* FriendCell.swift */; };
+		993F168726BEA197002EB6FE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F168626BEA197002EB6FE /* Post.swift */; };
+		993F168C26BEC42B002EB6FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F168B26BEC42B002EB6FE /* User.swift */; };
+		9956326C26C5B9D6004B2A0C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956326B26C5B9D6004B2A0C /* PostCell.swift */; };
+		9956326E26C61777004B2A0C /* CreatePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956326D26C61777004B2A0C /* CreatePostController.swift */; };
+		9956327026C637C4004B2A0C /* NotificationHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956326F26C637C4004B2A0C /* NotificationHUD.swift */; };
+		9963AB0D26D6B7BC006C6C86 /* PostDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB0C26D6B7BC006C6C86 /* PostDetailsController.swift */; };
+		9963AB0F26D6B8DB006C6C86 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB0E26D6B8DB006C6C86 /* Comment.swift */; };
+		9963AB1126D6C2CA006C6C86 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1026D6C2CA006C6C86 /* CommentCell.swift */; };
+		9963AB1326D6D929006C6C86 /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1226D6D929006C6C86 /* CustomInputAccessoryView.swift */; };
+		9963AB1826D7806C006C6C86 /* LikesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1726D7806C006C6C86 /* LikesController.swift */; };
+		9963AB1A26D7812F006C6C86 /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1926D7812F006C6C86 /* LikeCell.swift */; };
+		9963AB1C26D781B8006C6C86 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1B26D781B8006C6C86 /* Like.swift */; };
+		9987A14C26DA978E0057F56E /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A14B26DA978D0057F56E /* UIView+Layout.swift */; };
+		9987A15026DA98290057F56E /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A14F26DA98290057F56E /* Factory.swift */; };
+		9987A15426DA9BB40057F56E /* IndentedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A15326DA9BB40057F56E /* IndentedTextField.swift */; };
+		9987A15626DA9DB10057F56E /* IndentedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A15526DA9DB10057F56E /* IndentedLabel.swift */; };
+		9987A15A26DD29B50057F56E /* SocialApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9987A15926DD29B50057F56E /* SocialApp-Info.plist */; };
+		999B6B2E26CF241900415878 /* UsersSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B6B2D26CF241900415878 /* UsersSearchController.swift */; };
+		999B6B3026CF24B400415878 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B6B2F26CF24B400415878 /* BaseListController.swift */; };
+		999B6B3226CF284D00415878 /* UserSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B6B3126CF284D00415878 /* UserSearchCell.swift */; };
+		999B6B3526CF861E00415878 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999B6B3426CF861E00415878 /* ProfileController.swift */; };
+		99AF55F526CFF4A70024F98E /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF55F426CFF4A70024F98E /* UserPostCell.swift */; };
+		99AF55F726D0637B0024F98E /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AF55F626D0637B0024F98E /* ProfileHeader.swift */; };
+		99E06D4F26D1DE6500E19180 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E06D4E26D1DE6500E19180 /* MainTabBarController.swift */; };
+		99F30B1D26C178C100235427 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F30B1C26C178C100235427 /* RegisterController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29E14D571841BCD4842D7529 /* Pods-RocketSocialApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketSocialApp.debug.xcconfig"; path = "Target Support Files/Pods-RocketSocialApp/Pods-RocketSocialApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7BD39DCA14058063B3C6A61D /* Pods_RocketSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RocketSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9906DCC526BC525F007A5C33 /* RocketSocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketSocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9906DCC826BC5260007A5C33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9906DCCA26BC5260007A5C33 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9906DCD126BC5260007A5C33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9906DCD426BC5260007A5C33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9906DCD626BC5260007A5C33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9906DCE026BC78EF007A5C33 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		9906DCE226BC7A3C007A5C33 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9906DCE726BCC50E007A5C33 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		993DC50D26D9447C00BB3D1C /* FriendsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsHeader.swift; sourceTree = "<group>"; };
+		993DC51126D9481900BB3D1C /* FriendsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsHorizontalController.swift; sourceTree = "<group>"; };
+		993DC51326D94EB500BB3D1C /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		993F168626BEA197002EB6FE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		993F168B26BEC42B002EB6FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9956326B26C5B9D6004B2A0C /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		9956326D26C61777004B2A0C /* CreatePostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostController.swift; sourceTree = "<group>"; };
+		9956326F26C637C4004B2A0C /* NotificationHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHUD.swift; sourceTree = "<group>"; };
+		9963AB0C26D6B7BC006C6C86 /* PostDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsController.swift; sourceTree = "<group>"; };
+		9963AB0E26D6B8DB006C6C86 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		9963AB1026D6C2CA006C6C86 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		9963AB1226D6D929006C6C86 /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
+		9963AB1726D7806C006C6C86 /* LikesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesController.swift; sourceTree = "<group>"; };
+		9963AB1926D7812F006C6C86 /* LikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCell.swift; sourceTree = "<group>"; };
+		9963AB1B26D781B8006C6C86 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		9987A14B26DA978D0057F56E /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		9987A14F26DA98290057F56E /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Factory.swift; path = ../../../MercadoLibreClone/MercadoLibreClone/Helpers/Factory.swift; sourceTree = "<group>"; };
+		9987A15326DA9BB40057F56E /* IndentedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndentedTextField.swift; sourceTree = "<group>"; };
+		9987A15526DA9DB10057F56E /* IndentedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentedLabel.swift; sourceTree = "<group>"; };
+		9987A15926DD29B50057F56E /* SocialApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialApp-Info.plist"; sourceTree = "<group>"; };
+		999B6B2D26CF241900415878 /* UsersSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSearchController.swift; sourceTree = "<group>"; };
+		999B6B2F26CF24B400415878 /* BaseListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
+		999B6B3126CF284D00415878 /* UserSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchCell.swift; sourceTree = "<group>"; };
+		999B6B3426CF861E00415878 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		99AF55F426CFF4A70024F98E /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
+		99AF55F626D0637B0024F98E /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
+		99E06D4E26D1DE6500E19180 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		99F30B1C26C178C100235427 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		E1CA8FA2EACE51A38C079D66 /* Pods-RocketSocialApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocketSocialApp.release.xcconfig"; path = "Target Support Files/Pods-RocketSocialApp/Pods-RocketSocialApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9906DCC226BC525F007A5C33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C7CD6782A9A7A8DC8183FB1 /* Pods_RocketSocialApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		312E15530597450027E91916 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29E14D571841BCD4842D7529 /* Pods-RocketSocialApp.debug.xcconfig */,
+				E1CA8FA2EACE51A38C079D66 /* Pods-RocketSocialApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9906DCBC26BC525F007A5C33 = {
+			isa = PBXGroup;
+			children = (
+				9987A15926DD29B50057F56E /* SocialApp-Info.plist */,
+				9906DCC726BC525F007A5C33 /* RocketSocialApp */,
+				9906DCC626BC525F007A5C33 /* Products */,
+				312E15530597450027E91916 /* Pods */,
+				F9AF7CA8D707C2E0956AC519 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9906DCC626BC525F007A5C33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9906DCC526BC525F007A5C33 /* RocketSocialApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9906DCC726BC525F007A5C33 /* RocketSocialApp */ = {
+			isa = PBXGroup;
+			children = (
+				9906DCDC26BC787F007A5C33 /* API */,
+				9906DCDD26BC7899007A5C33 /* Models */,
+				9906DCDE26BC78A2007A5C33 /* Views */,
+				9906DCDF26BC78A9007A5C33 /* Controllers */,
+				9906DCE426BCC156007A5C33 /* Extensions */,
+				993F168826BEA71C002EB6FE /* Helpers */,
+				9906DCC826BC5260007A5C33 /* AppDelegate.swift */,
+				9906DCCA26BC5260007A5C33 /* SceneDelegate.swift */,
+				9906DCD126BC5260007A5C33 /* Assets.xcassets */,
+				9906DCD326BC5260007A5C33 /* LaunchScreen.storyboard */,
+				9906DCD626BC5260007A5C33 /* Info.plist */,
+			);
+			path = RocketSocialApp;
+			sourceTree = "<group>";
+		};
+		9906DCDC26BC787F007A5C33 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9906DCE226BC7A3C007A5C33 /* Service.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9906DCDD26BC7899007A5C33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				993F168626BEA197002EB6FE /* Post.swift */,
+				993F168B26BEC42B002EB6FE /* User.swift */,
+				9963AB0E26D6B8DB006C6C86 /* Comment.swift */,
+				9963AB1B26D781B8006C6C86 /* Like.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9906DCDE26BC78A2007A5C33 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9963AB1226D6D929006C6C86 /* CustomInputAccessoryView.swift */,
+				9956326B26C5B9D6004B2A0C /* PostCell.swift */,
+				999B6B3126CF284D00415878 /* UserSearchCell.swift */,
+				99AF55F426CFF4A70024F98E /* UserPostCell.swift */,
+				99AF55F626D0637B0024F98E /* ProfileHeader.swift */,
+				9963AB1026D6C2CA006C6C86 /* CommentCell.swift */,
+				9963AB1926D7812F006C6C86 /* LikeCell.swift */,
+				993DC50D26D9447C00BB3D1C /* FriendsHeader.swift */,
+				993DC51326D94EB500BB3D1C /* FriendCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9906DCDF26BC78A9007A5C33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9963AB0B26D6B7A1006C6C86 /* Post */,
+				999B6B3326CF860D00415878 /* Profile */,
+				999B6B2C26CF23FB00415878 /* Search */,
+				993DC51026D9480A00BB3D1C /* Home */,
+				9906DCE726BCC50E007A5C33 /* LoginController.swift */,
+				99F30B1C26C178C100235427 /* RegisterController.swift */,
+				99E06D4E26D1DE6500E19180 /* MainTabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		9906DCE426BCC156007A5C33 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9987A14B26DA978D0057F56E /* UIView+Layout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		993DC51026D9480A00BB3D1C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9906DCE026BC78EF007A5C33 /* HomeController.swift */,
+				993DC51126D9481900BB3D1C /* FriendsHorizontalController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		993F168826BEA71C002EB6FE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				999B6B2F26CF24B400415878 /* BaseListController.swift */,
+				9956326F26C637C4004B2A0C /* NotificationHUD.swift */,
+				9987A14F26DA98290057F56E /* Factory.swift */,
+				9987A15326DA9BB40057F56E /* IndentedTextField.swift */,
+				9987A15526DA9DB10057F56E /* IndentedLabel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9963AB0B26D6B7A1006C6C86 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				9956326D26C61777004B2A0C /* CreatePostController.swift */,
+				9963AB0C26D6B7BC006C6C86 /* PostDetailsController.swift */,
+				9963AB1726D7806C006C6C86 /* LikesController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		999B6B2C26CF23FB00415878 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				999B6B2D26CF241900415878 /* UsersSearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		999B6B3326CF860D00415878 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				999B6B3426CF861E00415878 /* ProfileController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		F9AF7CA8D707C2E0956AC519 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BD39DCA14058063B3C6A61D /* Pods_RocketSocialApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9906DCC426BC525F007A5C33 /* RocketSocialApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9906DCD926BC5260007A5C33 /* Build configuration list for PBXNativeTarget "RocketSocialApp" */;
+			buildPhases = (
+				1117A8A4C2DFE794334A5433 /* [CP] Check Pods Manifest.lock */,
+				9906DCC126BC525F007A5C33 /* Sources */,
+				9906DCC226BC525F007A5C33 /* Frameworks */,
+				9906DCC326BC525F007A5C33 /* Resources */,
+				E6CD65A66F8E7BB4F26A3C36 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RocketSocialApp;
+			productName = RocketSocialApp;
+			productReference = 9906DCC526BC525F007A5C33 /* RocketSocialApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9906DCBD26BC525F007A5C33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9906DCC426BC525F007A5C33 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 9906DCC026BC525F007A5C33 /* Build configuration list for PBXProject "RocketSocialApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9906DCBC26BC525F007A5C33;
+			productRefGroup = 9906DCC626BC525F007A5C33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9906DCC426BC525F007A5C33 /* RocketSocialApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9906DCC326BC525F007A5C33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9987A15A26DD29B50057F56E /* SocialApp-Info.plist in Resources */,
+				9906DCD526BC5260007A5C33 /* LaunchScreen.storyboard in Resources */,
+				9906DCD226BC5260007A5C33 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1117A8A4C2DFE794334A5433 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RocketSocialApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6CD65A66F8E7BB4F26A3C36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RocketSocialApp/Pods-RocketSocialApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RocketSocialApp/Pods-RocketSocialApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RocketSocialApp/Pods-RocketSocialApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9906DCC126BC525F007A5C33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9987A15626DA9DB10057F56E /* IndentedLabel.swift in Sources */,
+				9987A15026DA98290057F56E /* Factory.swift in Sources */,
+				9906DCE126BC78EF007A5C33 /* HomeController.swift in Sources */,
+				9906DCE326BC7A3C007A5C33 /* Service.swift in Sources */,
+				9906DCC926BC5260007A5C33 /* AppDelegate.swift in Sources */,
+				9963AB1126D6C2CA006C6C86 /* CommentCell.swift in Sources */,
+				9963AB1C26D781B8006C6C86 /* Like.swift in Sources */,
+				993DC51426D94EB500BB3D1C /* FriendCell.swift in Sources */,
+				9956326E26C61777004B2A0C /* CreatePostController.swift in Sources */,
+				999B6B2E26CF241900415878 /* UsersSearchController.swift in Sources */,
+				993F168726BEA197002EB6FE /* Post.swift in Sources */,
+				9963AB0D26D6B7BC006C6C86 /* PostDetailsController.swift in Sources */,
+				993DC51226D9481900BB3D1C /* FriendsHorizontalController.swift in Sources */,
+				9963AB1A26D7812F006C6C86 /* LikeCell.swift in Sources */,
+				993F168C26BEC42B002EB6FE /* User.swift in Sources */,
+				999B6B3526CF861E00415878 /* ProfileController.swift in Sources */,
+				9987A14C26DA978E0057F56E /* UIView+Layout.swift in Sources */,
+				99AF55F526CFF4A70024F98E /* UserPostCell.swift in Sources */,
+				9963AB0F26D6B8DB006C6C86 /* Comment.swift in Sources */,
+				99AF55F726D0637B0024F98E /* ProfileHeader.swift in Sources */,
+				9987A15426DA9BB40057F56E /* IndentedTextField.swift in Sources */,
+				9906DCCB26BC5260007A5C33 /* SceneDelegate.swift in Sources */,
+				9906DCE826BCC50E007A5C33 /* LoginController.swift in Sources */,
+				99E06D4F26D1DE6500E19180 /* MainTabBarController.swift in Sources */,
+				999B6B3226CF284D00415878 /* UserSearchCell.swift in Sources */,
+				999B6B3026CF24B400415878 /* BaseListController.swift in Sources */,
+				9963AB1826D7806C006C6C86 /* LikesController.swift in Sources */,
+				9956327026C637C4004B2A0C /* NotificationHUD.swift in Sources */,
+				99F30B1D26C178C100235427 /* RegisterController.swift in Sources */,
+				9956326C26C5B9D6004B2A0C /* PostCell.swift in Sources */,
+				993DC50E26D9447C00BB3D1C /* FriendsHeader.swift in Sources */,
+				9963AB1326D6D929006C6C86 /* CustomInputAccessoryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9906DCD326BC5260007A5C33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9906DCD426BC5260007A5C33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9906DCD726BC5260007A5C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9906DCD826BC5260007A5C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9906DCDA26BC5260007A5C33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29E14D571841BCD4842D7529 /* Pods-RocketSocialApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32F5YA8CDX;
+				INFOPLIST_FILE = RocketSocialApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.jorgepram.RocketSocialApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9906DCDB26BC5260007A5C33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1CA8FA2EACE51A38C079D66 /* Pods-RocketSocialApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 32F5YA8CDX;
+				INFOPLIST_FILE = RocketSocialApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.jorgepram.RocketSocialApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9906DCC026BC525F007A5C33 /* Build configuration list for PBXProject "RocketSocialApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9906DCD726BC5260007A5C33 /* Debug */,
+				9906DCD826BC5260007A5C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9906DCD926BC5260007A5C33 /* Build configuration list for PBXNativeTarget "RocketSocialApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9906DCDA26BC5260007A5C33 /* Debug */,
+				9906DCDB26BC5260007A5C33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9906DCBD26BC525F007A5C33 /* Project object */;
+}
