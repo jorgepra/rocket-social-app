@@ -11,6 +11,7 @@ import Alamofire
 class Service: NSObject {
     
     static var shared = Service()
+    private override init() {}    
     
     var base_url: String {
       get {

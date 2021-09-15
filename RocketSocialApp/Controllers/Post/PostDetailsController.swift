@@ -9,10 +9,7 @@ import UIKit
 import JGProgressHUD
 
 class PostDetailsController: BaseListController, UICollectionViewDelegateFlowLayout {
-    
-    let postId: String
-    var comments = [Comment]()
-    
+       
     fileprivate let activityIndicator: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: .large)
         aiv.startAnimating()
@@ -46,8 +43,7 @@ class PostDetailsController: BaseListController, UICollectionViewDelegateFlowLay
             self.fetchDetails()
         }
     }
-    
-    
+        
     override var inputAccessoryView: UIView?{
         get{
             return customInputView
@@ -58,18 +54,26 @@ class PostDetailsController: BaseListController, UICollectionViewDelegateFlowLay
         return true
     }
     
+    var postId: String!
+    var comments = [Comment]()
+    
     init(postId: String) {
-        self.postId = postId
         super.init()
+        self.postId = postId
     }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.keyboardDismissMode = .interactive
-        collectionView.backgroundColor = .white
-        collectionView.register(CommentCell.self, forCellWithReuseIdentifier: "cell")
-        navigationItem.title = "Comments"
+        configureCollectionViewController()
         fetchDetails()
         setupActivityIndicator()
+    }
+    
+    fileprivate func configureCollectionViewController() {
+        navigationItem.title                = "Comments"
+        collectionView.keyboardDismissMode  = .interactive
+        collectionView.backgroundColor      = .white
+        collectionView.register(CommentCell.self, forCellWithReuseIdentifier: "cell")
     }
     
     fileprivate func setupActivityIndicator() {
@@ -99,20 +103,19 @@ class PostDetailsController: BaseListController, UICollectionViewDelegateFlowLay
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CommentCell
+        let cell    = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CommentCell
         let comment = comments[indexPath.item]
         cell.configureCell(comment: comment)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let largeHeight: CGFloat = 1000
-        let dummyCell = CommentCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: largeHeight))
+        let largeHeight: CGFloat    = 1000
+        let dummyCell               = CommentCell(frame: .init(x: 0, y: 0, width: view.frame.width, height: largeHeight))
         dummyCell.configureCell(comment: comments[indexPath.item])
         dummyCell.layoutIfNeeded()
 
         let height = dummyCell.systemLayoutSizeFitting(.init(width: view.frame.width, height: largeHeight)).height
-
         return .init(width: view.frame.width, height: height)
     }
     

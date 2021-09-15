@@ -12,7 +12,6 @@ protocol LoginControllerDelegate {
     func didFinishLogin()
 }
 
-
 class LoginController: UIViewController {
        
     let imageView : UIImageView = {
@@ -23,26 +22,50 @@ class LoginController: UIViewController {
         return iv
     }()
     
-    let emailTextField = IndentedTextField(placeholder: "Email", padding: 24, cornerRadius: 25, keyboardType: .emailAddress, backgroundColor: .white)
-    let passwordTextField = IndentedTextField(placeholder: "Password", padding: 24, cornerRadius: 25, keyboardType: .default, backgroundColor: .white, isSecureTextEntry: true)
-    lazy var loginButton = UIButton(title: "Login", titleColor: .white, font: .boldSystemFont(ofSize: 18), backgroundColor: .black, target: self, action: #selector(handleLogin))
+    let emailTextField          = IndentedTextField(placeholder: "Email", padding: 24, cornerRadius: 25, keyboardType: .emailAddress, backgroundColor: .white)
+    let passwordTextField       = IndentedTextField(placeholder: "Password", padding: 24, cornerRadius: 25, keyboardType: .default, backgroundColor: .white, isSecureTextEntry: true)
+    lazy var loginButton        = UIButton(title: "Login", titleColor: .white, font: .boldSystemFont(ofSize: 18), backgroundColor: .black, target: self, action: #selector(handleLogin))
     lazy var goToRegisterButton = UIButton(title: "Need an account? Go to Register.", titleColor: .black, font: .systemFont(ofSize: 16, weight: .bold), target: self, action: #selector(handleGoToRegister))
-    
-    
-    lazy var bottomStackView = UIStackView(arrangedSubviews: [emailTextField,passwordTextField,loginButton, goToRegisterButton])
-    
-    lazy var overallStackView = UIStackView(arrangedSubviews: [
-        imageView,
-        bottomStackView
-    ])
-     
+    lazy var bottomStackView    = UIStackView(arrangedSubviews: [emailTextField,passwordTextField,loginButton, goToRegisterButton])
+    lazy var overallStackView   = UIStackView(arrangedSubviews: [imageView,bottomStackView])
     var delegate: LoginControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupController()
         setupLayout()
         setupOrientation()
+    }
+    
+    fileprivate func setupController()  {
+        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    fileprivate func setupLayout() {
+                
+        emailTextField.autocapitalizationType = .none
+        emailTextField.constrainHeight(50)
+        passwordTextField.constrainHeight(50)
+        loginButton.constrainHeight(50)
+        loginButton.layer.cornerRadius = 25
+        goToRegisterButton.constrainHeight(50)
+        
+        // setup Components
+        bottomStackView.axis = .vertical
+        bottomStackView.spacing = 12
+        bottomStackView.distribution = .fillProportionally
+        
+        // setup Overall Stack
+        overallStackView.axis = .vertical
+        overallStackView.spacing = 12
+        
+        view.addSubview(overallStackView)
+        overallStackView.anchor(top: nil, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 55, bottom: 0, right: 55))
+        overallStackView.centerYInSuperview()
+        
+        // TODO: move the overall stack when the keyboard appears and dismiss the keyboard at scrolling
     }
     
     @objc fileprivate func handleLogin()  {
@@ -72,37 +95,7 @@ class LoginController: UIViewController {
         let registerController = RegisterController()
         navigationController?.pushViewController(registerController, animated: true)
     }
-    
-    // MARK:- Setup Layout
-    
-    fileprivate func setupLayout() {
-        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        navigationController?.navigationBar.isHidden = true
-        
-        emailTextField.autocapitalizationType = .none
-        emailTextField.constrainHeight(50)
-        passwordTextField.constrainHeight(50)
-        loginButton.constrainHeight(50)
-        loginButton.layer.cornerRadius = 25
-        goToRegisterButton.constrainHeight(50)
-        
-        // setup Components
-        bottomStackView.axis = .vertical
-        bottomStackView.spacing = 12
-        bottomStackView.distribution = .fillProportionally
-        
-        // setup Overall Stack
-        overallStackView.axis = .vertical
-        overallStackView.spacing = 12
-        
-        view.addSubview(overallStackView)
-        overallStackView.anchor(top: nil, leading: view.safeAreaLayoutGuide.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 55, bottom: 0, right: 55))
-        overallStackView.centerYInSuperview()
-        
-        // TODO: move the overall stack when the keyboard appears and dismiss the keyboard at scrolling
-        
-    }
-    
+            
     // MARK:- Orientation and Priority
     
     fileprivate func setupOrientation()  {
@@ -121,7 +114,6 @@ class LoginController: UIViewController {
     
     // MARK:- show notification
     let hud = JGProgressHUD(style: .dark)
-    
     
     private func showNotification(text : String, isError: Bool) {
         

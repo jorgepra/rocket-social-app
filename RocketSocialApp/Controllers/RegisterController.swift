@@ -18,13 +18,12 @@ class RegisterController: UIViewController {
         iv.setContentHuggingPriority(UILayoutPriority(250), for: .horizontal)
         return iv
     }()
-    let fullNameTextField = IndentedTextField(placeholder: "Full  name", padding: 24, cornerRadius: 25, keyboardType: .emailAddress, backgroundColor: .white)
-    let emailTextField = IndentedTextField(placeholder: "Email", padding: 24, cornerRadius: 25, keyboardType: .emailAddress, backgroundColor: .white)
-    let passwordTextField = IndentedTextField(placeholder: "Password", padding: 24, cornerRadius: 25, keyboardType: .default, backgroundColor: .white, isSecureTextEntry: true)
-    lazy var signupButton = UIButton(title: "Sign Up", titleColor: .white, font: .boldSystemFont(ofSize: 18), backgroundColor: .black, target: self, action: #selector(handleSignup))
-    lazy var goBackToLoginButton = UIButton(title: "Go back to login", titleColor: .black, font: .systemFont(ofSize: 16, weight: .bold), target: self, action: #selector(handleGoBackToLogin))
     
-    
+    let fullNameTextField           = IndentedTextField(placeholder: "Full  name", padding: 24, cornerRadius: 25, keyboardType: .emailAddress, backgroundColor: .white)
+    let emailTextField              = IndentedTextField(placeholder: "Email", padding: 24, cornerRadius: 25, keyboardType: .emailAddress, backgroundColor: .white)
+    let passwordTextField           = IndentedTextField(placeholder: "Password", padding: 24, cornerRadius: 25, keyboardType: .default, backgroundColor: .white, isSecureTextEntry: true)
+    lazy var signupButton           = UIButton(title: "Sign Up", titleColor: .white, font: .boldSystemFont(ofSize: 18), backgroundColor: .black, target: self, action: #selector(handleSignup))
+    lazy var goBackToLoginButton    = UIButton(title: "Go back to login", titleColor: .black, font: .systemFont(ofSize: 16, weight: .bold), target: self, action: #selector(handleGoBackToLogin))
     lazy var bottomStackView = UIStackView(arrangedSubviews: [
         fullNameTextField,
         emailTextField,
@@ -33,7 +32,6 @@ class RegisterController: UIViewController {
         goBackToLoginButton
         ]
     )
-    
     lazy var overallStackView = UIStackView(arrangedSubviews: [
         imageView,
         bottomStackView
@@ -42,8 +40,14 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewController()
         setupLayout()
         setupOrientation()
+    }
+    
+    fileprivate func setupViewController()  {
+        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        navigationController?.navigationBar.isHidden = true
     }
     
     @objc fileprivate func handleSignup() {
@@ -79,9 +83,6 @@ class RegisterController: UIViewController {
     // MARK:- setup components
     
     fileprivate func setupLayout()  {
-        view.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        navigationController?.navigationBar.isHidden = true
-        
         fullNameTextField.constrainHeight(50)
         emailTextField.autocapitalizationType = .none
         emailTextField.constrainHeight(50)

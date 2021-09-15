@@ -10,11 +10,11 @@ import UIKit
 class LikesController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     var likes = [Like]()
-    let postId: String
+    var postId: String!
     
     init(postId: String) {
-        self.postId = postId
         super.init()
+        self.postId = postId
     }
     
     let activityIndicatorView: UIActivityIndicatorView = {
@@ -23,16 +23,19 @@ class LikesController: BaseListController, UICollectionViewDelegateFlowLayout {
         aiv.color = .darkGray
         return aiv
     }()
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureCollectionView()
+        fetchLikes()
+        setupActivityIndicator()
+    }
+    
+    fileprivate func configureCollectionView() {
         navigationItem.title = "Likes"
         collectionView.backgroundColor = .white
         collectionView.register(LikeCell.self, forCellWithReuseIdentifier: "cell")
-        
-        fetchLikes()
-        setupActivityIndicator()
     }
     
     fileprivate func setupActivityIndicator() {

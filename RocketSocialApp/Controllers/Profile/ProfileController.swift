@@ -13,19 +13,18 @@ protocol ProfileControllerDelegate {
     func didFollowForProfile(userId: String, isFollowing: Bool?)
 }
 
-class ProfileController: BaseListController, UICollectionViewDelegateFlowLayout {
+class ProfileController: BaseListController {
     
-    let userId: String
+    var userId  : String!
+    var user    : User?
+    var posts   = [Post]()
+    var hud     = NotificationHUD(style: .dark)
     
     init(userId: String) {
-        self.userId = userId
         super.init()
+        self.userId = userId
     }
-    
-    var user: User?
-    var posts = [Post]()
-    var hud = NotificationHUD(style: .dark)
-    
+            
     fileprivate let activityIndicator: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: .large)
         aiv.startAnimating()
@@ -34,16 +33,19 @@ class ProfileController: BaseListController, UICollectionViewDelegateFlowLayout 
     }()
     
     var delegate: ProfileControllerDelegate?
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .white
-        collectionView.register(UserPostCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
-        
+        configureCollectionViewController()
         fetchUserProfile()
         setupActivityIndicator()
         setupRefreshController()
+    }
+    
+    fileprivate func configureCollectionViewController() {
+        collectionView.backgroundColor = .white
+        collectionView.register(UserPostCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
     }
     
     fileprivate func setupActivityIndicator() {
@@ -58,7 +60,6 @@ class ProfileController: BaseListController, UICollectionViewDelegateFlowLayout 
     }
     
     @objc func fetchUserProfile()  {
-        
         Service.shared.fetchProfile(userId: userId) { result in
             
             self.collectionView.refreshControl?.endRefreshing()
@@ -76,9 +77,15 @@ class ProfileController: BaseListController, UICollectionViewDelegateFlowLayout 
             }
         }
     }
+            
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension ProfileController: UICollectionViewDelegateFlowLayout{
     
     // MARK:- header
-    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! ProfileHeader
         header.configureHeader(user: user)
@@ -124,11 +131,8 @@ class ProfileController: BaseListController, UICollectionViewDelegateFlowLayout 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return .init(0)
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 }
+
 
 // MARK:- ProfileHeaderDelegate
 

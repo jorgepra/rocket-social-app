@@ -11,34 +11,39 @@ class HomeController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     var posts = [Post]()
     var friends = [User]()
-    
     let hudNotification = NotificationHUD(style: .dark)
+    
     fileprivate let activityIndicator: UIActivityIndicatorView = {
         let aiv = UIActivityIndicatorView(style: .large)
         aiv.startAnimating()
         aiv.color = .darkGray
         return aiv
     }()
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.backgroundColor = .white
-        collectionView.register(UserPostCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.register(FriendsHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
-        collectionView.allowsSelection = false
-        
-        navigationItem.rightBarButtonItems = [
-            .init(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(handleSearch)),
-        ]
-        
-        navigationItem.leftBarButtonItem = .init(title: "Log In", style: .plain, target: self, action: #selector(goToLogin))
-        navigationController?.navigationBar.tintColor = .black
-        
+        configureCollectionView()
+        configureNavigationBar()
         handleFetchData()
         showCookies()
         setupActivityIndicator()
         setupRefreshController()
+    }
+    
+    fileprivate func configureCollectionView() {
+        collectionView.backgroundColor = .white
+        collectionView.register(UserPostCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(FriendsHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
+        collectionView.allowsSelection = false
+    }
+    
+    fileprivate func configureNavigationBar() {
+        navigationItem.rightBarButtonItems = [
+            .init(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(handleSearch)),
+        ]
+        navigationItem.leftBarButtonItem = .init(title: "Log In", style: .plain, target: self, action: #selector(goToLogin))
+        navigationController?.navigationBar.tintColor = .black
     }
     
     fileprivate func setupActivityIndicator()  {

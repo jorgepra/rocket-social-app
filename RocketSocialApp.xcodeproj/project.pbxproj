@@ -20,6 +20,7 @@
 		993DC51426D94EB500BB3D1C /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993DC51326D94EB500BB3D1C /* FriendCell.swift */; };
 		993F168726BEA197002EB6FE /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F168626BEA197002EB6FE /* Post.swift */; };
 		993F168C26BEC42B002EB6FE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993F168B26BEC42B002EB6FE /* User.swift */; };
+		99442BA826DFF3B700C268FB /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99442BA726DFF3B700C268FB /* Factory.swift */; };
 		9956326C26C5B9D6004B2A0C /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956326B26C5B9D6004B2A0C /* PostCell.swift */; };
 		9956326E26C61777004B2A0C /* CreatePostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956326D26C61777004B2A0C /* CreatePostController.swift */; };
 		9956327026C637C4004B2A0C /* NotificationHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956326F26C637C4004B2A0C /* NotificationHUD.swift */; };
@@ -31,7 +32,6 @@
 		9963AB1A26D7812F006C6C86 /* LikeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1926D7812F006C6C86 /* LikeCell.swift */; };
 		9963AB1C26D781B8006C6C86 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9963AB1B26D781B8006C6C86 /* Like.swift */; };
 		9987A14C26DA978E0057F56E /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A14B26DA978D0057F56E /* UIView+Layout.swift */; };
-		9987A15026DA98290057F56E /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A14F26DA98290057F56E /* Factory.swift */; };
 		9987A15426DA9BB40057F56E /* IndentedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A15326DA9BB40057F56E /* IndentedTextField.swift */; };
 		9987A15626DA9DB10057F56E /* IndentedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9987A15526DA9DB10057F56E /* IndentedLabel.swift */; };
 		9987A15A26DD29B50057F56E /* SocialApp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9987A15926DD29B50057F56E /* SocialApp-Info.plist */; };
@@ -62,6 +62,7 @@
 		993DC51326D94EB500BB3D1C /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		993F168626BEA197002EB6FE /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		993F168B26BEC42B002EB6FE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		99442BA726DFF3B700C268FB /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		9956326B26C5B9D6004B2A0C /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		9956326D26C61777004B2A0C /* CreatePostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostController.swift; sourceTree = "<group>"; };
 		9956326F26C637C4004B2A0C /* NotificationHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHUD.swift; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		9963AB1926D7812F006C6C86 /* LikeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeCell.swift; sourceTree = "<group>"; };
 		9963AB1B26D781B8006C6C86 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		9987A14B26DA978D0057F56E /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
-		9987A14F26DA98290057F56E /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Factory.swift; path = ../../../MercadoLibreClone/MercadoLibreClone/Helpers/Factory.swift; sourceTree = "<group>"; };
 		9987A15326DA9BB40057F56E /* IndentedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndentedTextField.swift; sourceTree = "<group>"; };
 		9987A15526DA9DB10057F56E /* IndentedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndentedLabel.swift; sourceTree = "<group>"; };
 		9987A15926DD29B50057F56E /* SocialApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialApp-Info.plist"; sourceTree = "<group>"; };
@@ -217,9 +217,9 @@
 			children = (
 				999B6B2F26CF24B400415878 /* BaseListController.swift */,
 				9956326F26C637C4004B2A0C /* NotificationHUD.swift */,
-				9987A14F26DA98290057F56E /* Factory.swift */,
 				9987A15326DA9BB40057F56E /* IndentedTextField.swift */,
 				9987A15526DA9DB10057F56E /* IndentedLabel.swift */,
+				99442BA726DFF3B700C268FB /* Factory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -372,8 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99442BA826DFF3B700C268FB /* Factory.swift in Sources */,
 				9987A15626DA9DB10057F56E /* IndentedLabel.swift in Sources */,
-				9987A15026DA98290057F56E /* Factory.swift in Sources */,
 				9906DCE126BC78EF007A5C33 /* HomeController.swift in Sources */,
 				9906DCE326BC7A3C007A5C33 /* Service.swift in Sources */,
 				9906DCC926BC5260007A5C33 /* AppDelegate.swift in Sources */,

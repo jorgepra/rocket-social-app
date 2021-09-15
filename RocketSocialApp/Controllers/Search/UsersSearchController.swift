@@ -9,18 +9,21 @@ import UIKit
 
 class UsersSearchController: BaseListController, UICollectionViewDelegateFlowLayout {
     
-    var users = [User]()
-    let hud = NotificationHUD(style: .dark)
-    
+    var users   = [User]()
+    let hud     = NotificationHUD(style: .dark)
+       
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollectionViewController()
+        fetchUsers()
+    }
+
+    fileprivate func configureCollectionViewController() {
         navigationItem.title = "Search"
         collectionView.backgroundColor = .white
         collectionView.register(UserSearchCell.self, forCellWithReuseIdentifier: "cell")
-        
-        fetchUsers()
     }
-        
+    
     fileprivate func fetchUsers() {
         Service.shared.searchForUsers { result in
             switch result{
